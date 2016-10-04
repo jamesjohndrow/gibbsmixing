@@ -149,7 +149,7 @@ if saving
 
 
     MUsml = MU(:,1:100:n);
-    save('Outputs/binomhmmh_simple_small.mat','MUsml','MU0','AR','TAU');
+    save('Outputs/binomhmmh_simple_small.mat','MUsml','MU0','TAU');
 end
 
 
