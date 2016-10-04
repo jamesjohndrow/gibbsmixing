@@ -126,14 +126,14 @@ for t=1:nmc+burn
      end
 end
 
-AR = zeros(size(MU,2),1);
-for j=1:size(MU,2)
-    if mod(j,1000)==0
-        disp(num2str(j));
-    end
-    tmp = ar(MU(5000:end,j),1);
-    AR(j) = tmp;
-end
+% AR = zeros(size(MU,2),1);
+% for j=1:size(MU,2)
+%     if mod(j,1000)==0
+%         disp(num2str(j));
+%     end
+%     tmp = ar(MU(5000:end,j),1);
+%     AR(j) = tmp;
+% end
 
 if saving
     save('Outputs/binomhmmh_simple.mat');
