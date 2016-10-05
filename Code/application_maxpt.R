@@ -186,7 +186,7 @@ ESscl <- ES.HMC/5000
 ESscl <- data.frame(ESscl)
 names(ESscl) <- c('EffectiveSize')
 
-save(PHI.HMC,AR,ESscl,df,file='Outputs/HMC_maxpt.RData')
+save(ES.HMC,AR,ESscl,df,file='Outputs/HMC_maxpt.RData')
 
 # acs <- acs/4
 # ess<-
