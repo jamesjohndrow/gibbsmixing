@@ -161,6 +161,9 @@ dat = list(N=N[subset],Y=Y[subset],n=length(subset))
 nch <- 1
 hlm = stan(model_name="Hierarchical Binomial Model", model_code = smod, data=dat , iter = nmc, chains = nch, verbose = TRUE, control=list(adapt_delta=0.9),algorithm="NUTS")
 save.image(file='Outputs/hbm_hmc.RData')
+} else {
+  load('Outputs/hbm_hmc.RData')
+}
 
 tmp <- ggs(hlm)
 gc()
@@ -183,15 +186,7 @@ ESscl <- ES.HMC/5000
 ESscl <- data.frame(ESscl)
 names(ESscl) <- c('EffectiveSize')
 
-TAU.HMC <- coef$Tau
-MU0.HMC <- coef$mu0
-
-save(PHI.HMC,MU.HMC,MU0.HMC,TAU.HMC,AR,ESscl,df,file='Outputs/HMC_maxpt.RData')
-
-
-} else {
-  load(file='Outputs/HMC_maxpt.RData')
-}
+save(PHI.HMC,AR,ESscl,df,file='Outputs/HMC_maxpt.RData')
 
 # acs <- acs/4
 # ess<-
