@@ -22,7 +22,7 @@ source('samplers.R')
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
-run_samplers <- T
+run_samplers <- F
 
 set.seed(5297121)
 
